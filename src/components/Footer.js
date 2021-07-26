@@ -2,16 +2,16 @@ import React from 'react';
 
 class Footer extends React.Component {
 
-    render() {
-        return (
-            <footer>
+  render() {
+    return (
+      <footer>
 
-                <h6>
-                    Author: Rawan Alazazi
-                </h6>
-            </footer>
-        )
-    }
+        <h6>
+            Author: Rawan Alazazi
+        </h6>
+      </footer>
+    );
+  }
 
 
 }
