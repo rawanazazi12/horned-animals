@@ -37,7 +37,6 @@ class HornedBeasts extends React.Component {
                 </Card.Body>
               </Card>
             </Col>
-            
           ))}
         </Row>
 

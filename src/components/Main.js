@@ -18,9 +18,7 @@ class Main extends React.Component {
             img={item.image_url}
           />
         ))
-        
-        }   
-       
+        }
       </main>
 
 
