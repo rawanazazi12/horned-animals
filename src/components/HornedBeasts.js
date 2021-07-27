@@ -26,8 +26,8 @@ class HornedBeasts extends React.Component {
         <p>{this.props.description} </p>
         <h5>❤️{this.state.numberOfVotes} </h5> */}
 
-        <Card style={{width:"16rem", height:"25rem" ,marginBlock:"2rem"}}>
-          <Card.Img variant="top" src={this.props.img} alt= {this.props.title} title={this.props.title} onClick={this.votingForBeast} style={{width:"16rem", height:"14rem"}}  />
+        <Card style={{width:'16rem', height:'25rem' ,marginBlock:'2rem'}}>
+          <Card.Img variant='top' src={this.props.img} alt= {this.props.title} title={this.props.title} onClick={this.votingForBeast} style={{width:'16rem', height:'14rem'}}/>
           <Card.Body>
             <Card.Title>{this.props.title}</Card.Title>
             <Card.Text>
@@ -37,7 +37,6 @@ class HornedBeasts extends React.Component {
             </Card.Text>
           </Card.Body>
         </Card>
-         
 
       </div>
     );

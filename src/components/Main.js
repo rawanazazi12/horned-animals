@@ -2,7 +2,7 @@ import React from 'react';
 import HornedBeasts from './HornedBeasts';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from  'react-bootstrap/Col';
+import Col from 'react-bootstrap/Col';
 
 
 
@@ -22,7 +22,7 @@ class Main extends React.Component {
         <Container>
           <Row>
             {this.props.dataFromJsonFile.map((item) => (
-              <Col lg={4}  xs="auto">
+              <Col lg={4} xs="auto">
                 <HornedBeasts
                   title={item.title}
                   description={item.description}
@@ -32,11 +32,10 @@ class Main extends React.Component {
             ))
             }
           </Row>
-        
 
 
         </Container>
-        
+
       </main>
 
 

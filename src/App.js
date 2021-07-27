@@ -15,14 +15,12 @@ class App extends React.Component {
       <div >
         <Header />
         <Main
-          dataFromJsonFile={Data} 
+          dataFromJsonFile={Data}
         />
         <Footer />
       </div>
-    
     );
   }
-  
 }
 
 
