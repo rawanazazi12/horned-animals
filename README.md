@@ -38,6 +38,20 @@ At this project I will create an application that displays images and informatio
 
 - *Actual time needed to complete*: 1hr 19 mins
 
+
+## Time Estimate Lab02
+
+### Feature #1: Display a Modal
+
+- *Estimate of time needed to complete*: 2 hr
+
+- *Start time*: 3:00pm
+
+- *Finish time*: 9:15pm
+
+- *Actual time needed to complete*: 6hr 15 mins
+
+
 ## Links and Resources
 
 - My notes during the lecture
