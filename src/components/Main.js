@@ -7,12 +7,7 @@ import Col from 'react-bootstrap/Col';
 
 
 class Main extends React.Component {
-  // constructor(props){
-  //   super(props);
-  //   this.state={
-  //     dataFromAppJs:this.props.dataFromJsonFile
-  //   };
-  // }
+
   render() {
     return (
       <main>
