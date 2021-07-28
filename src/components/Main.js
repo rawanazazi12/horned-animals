@@ -25,8 +25,6 @@ class Main extends React.Component {
     let newFilteredArr=this.state.filteredArr.filter((element) =>{
       console.log(typeof(this.selectedHornsNumber));
       return((element.hornsNo) === parseInt(this.selectedHornsNumber));
-    
-      
     });
     // console.log(filteredArr);
     console.log(newFilteredArr);

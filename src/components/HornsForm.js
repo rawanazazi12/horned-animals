@@ -8,7 +8,7 @@ export class HornsForm extends Component {
       selectedHornsNumber:''
     };
   }
-  
+
   updatingHornsNumber= (event)=>{
     console.log('Hiiiiiiiiiiiiii');
     this.setState ({
@@ -16,7 +16,6 @@ export class HornsForm extends Component {
     });
     this.props.filteringBeasts(this.state.selectedHornsNumber);
     console.log(this.state.selectedHornsNumber,'HHH');
-    
   }
   submittingForm=(event)=>{
     event.preventDefault();
