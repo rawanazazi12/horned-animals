@@ -11,24 +11,26 @@ class Main extends React.Component {
   constructor(props){
     super(props);
     this.state={
-      hornsNumber:1,
-      hornsDataArr:this.props.dataFromJsonFile
+      newHornsNumber:1,
+      filteredArr:this.props.dataFromJsonFile
     };
   }
 
 
-  filteringBeasts(newHornsNumber){
-    console.log(this.state);
-    let filteredArr=this.state.hornsDataArr.filter((element) =>{
-      return(element.horns === this.hornsNumber);
-
-    });
+  filteringBeasts=(selectedHornsNumber)=>{
     this.setState({
-      hornsNumber: newHornsNumber,
-      hornsDataArr:filteredArr
+      newHornsNumber: selectedHornsNumber
+      // filteredArr:hornsDataArr
     });
-    console.log(filteredArr);
-    return filteredArr;
+    let newFilteredArr=this.state.filteredArr.filter((element) =>{
+      console.log(typeof(this.selectedHornsNumber));
+      return((element.hornsNo) === parseInt(this.selectedHornsNumber));
+    
+      
+    });
+    // console.log(filteredArr);
+    console.log(newFilteredArr);
+    return newFilteredArr;
   }
 
   render() {
@@ -36,14 +38,14 @@ class Main extends React.Component {
       <main>
         <HornsForm
           hornsData={this.props.dataFromJsonFile}
-          filtering={this.filteringBeasts}
+          filteringBeasts={this.filteringBeasts}
         />
         <h3>
             Click on the Image to Vote for Your Favourite Beast
         </h3>
         <Container>
           <Row>
-            {this.state.hornsDataArr.map((item) => (
+            {this.state.filteredArr.map((item) => (
               <Col lg={4} xs="auto">
                 <HornedBeasts
                   title={item.title}
