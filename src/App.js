@@ -24,7 +24,7 @@ class App extends React.Component {
     return (
       <div >
         <SelectedBeast
-          bb={this.show}
+          bb={this.props.handleModal}
         />
         <Header />
         <Main

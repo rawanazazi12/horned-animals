@@ -46,6 +46,7 @@ class HornedBeasts extends React.Component {
         numberOfVotes: this.state.numberOfVotes + 1
       }
     );
+    this.props.handleModal;
 
   }
 
