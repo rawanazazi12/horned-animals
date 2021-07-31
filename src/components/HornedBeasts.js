@@ -6,12 +6,7 @@ import Card from 'react-bootstrap/Card';
 
 
 class HornedBeasts extends React.Component {
-  // const mystyle = {
-  //   color: "white",
-  //   backgroundColor: "DodgerBlue",
-  //   padding: "10px",
-  //   fontFamily: "Arial"
-  // };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -24,7 +19,7 @@ class HornedBeasts extends React.Component {
       <div>
 
         <Card style={{ width: '16rem', height: '25rem', marginBlock: '2rem' }}>
-          <Card.Img variant='top' src={this.props.img} alt={this.props.title} title={this.props.title} onClick={this.votingForBeast} style={{ width: '16rem', height: '14rem' }} />
+          <Card.Img variant='top' src={this.props.img} alt={this.props.title} title={this.props.title} onClick={() =>{this.showCard();}} style={{ width: '16rem', height: '14rem' }} />
           <Card.Body>
             <Card.Title>{this.props.title}</Card.Title>
 
@@ -46,7 +41,18 @@ class HornedBeasts extends React.Component {
         numberOfVotes: this.state.numberOfVotes + 1
       }
     );
-    this.props.handleModal;
+  };
+  showCard = () => {
+    this.votingForBeast();
+    this.props.updateVisibleData;
+    this.props.modalData(
+      this.props.image,
+      this.props.title,
+      this.props.description,
+      this.state.numberOfVotes
+    );
+    console.log(this.state.numberOfVotes,'HIIIIIIII');
+    // this.props.modalData(this.props);
 
   }
 
