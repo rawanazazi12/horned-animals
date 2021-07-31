@@ -17,20 +17,12 @@ class Main extends React.Component {
   }
 
 
-  filteringBeasts=(selectedHornsNumber)=>{
+  filteringBeasts=(filteredHornBeasts)=>{
     this.setState({
-      newHornsNumber: selectedHornsNumber
-      // filteredArr:hornsDataArr
+      filteredArr:filteredHornBeasts
     });
-    let newFilteredArr=this.state.filteredArr.filter((element) =>{
-      console.log(typeof(this.selectedHornsNumber));
-      return((element.hornsNo) === parseInt(this.selectedHornsNumber));
-    });
-    // console.log(filteredArr);
-    console.log(newFilteredArr);
-    return newFilteredArr;
-  }
 
+  }
   render() {
     return (
       <main>
@@ -49,6 +41,8 @@ class Main extends React.Component {
                   title={item.title}
                   description={item.description}
                   img={item.image_url}
+                  updateVisibleData={this.props.updateVisibleData}
+                  modalData={this.props.modalData}
                   hornsNo={item.horns}
                 />
               </Col>
